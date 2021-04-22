@@ -1,0 +1,16 @@
+{% extends "app/Base.html" %}
+
+{% block header %}
+    <title>Home - Stirling Dish Generator</title>
+{% endblock header %}
+
+{% block body %}
+
+<div class=" bg-dark">
+    <div id="real-time-vars" class="text-light p-3" ></div>
+{% load static %}
+    <img class="img-fluid mx-auto d-block" alt="Stirling dish generator installed on the roof of ETSEIB building in Barcelona"  src="{% static 'app/Stirling_Generator.JPG' %}">
+</div>
+
+<script type="text/javascript" src="{% static 'app/home.js' %}"></script>
+{% endblock body %}

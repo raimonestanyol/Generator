@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA/4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREAAAAAAQEREREAAAABAAEREREAAAAQEAERERAAABAQABEREQAAARAAAREREAAAEAAQEREQAAAQAQABEREAAQEBAAAREQABABAAAAERAAEBAQAAAREQAQEAEAEQERAREAAREAAREREREQARAAERERAAAAARABARAAAAAAAREB/wAAQH8AAHAfAACsDwAArgcAAM8DAADugwAA7cEAANXhAADb8QAA1fAAANbIAACOOAAAAZwAAA/mAACf+AAA" rel="icon" type="image/x-icon" />
+    {% block header %}{% endblock header %}
+    <style>
+        #ui-datepicker-div {
+            background-color: #eee;
+            border: solid black 1px;
+        };
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+{% load static %}
+  <a class="navbar-brand" href="/home/"><img class="rounded" width="30" height="30"
+                                             src="{% static 'app/Stirling-logo.jpg' %}">&nbsp; Stirling Dish Generator</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item nav-home">
+        <a class="nav-link" href="/home/">Home</a>
+      </li>
+      <li class="nav-item nav-table">
+        <a class="nav-link" href="/table/">Table</a>
+      </li>
+      <li class="nav-item nav-graph">
+        <a class="nav-link" href="/graph/">Graph</a>
+      </li>
+      <li class="nav-item nav-about">
+        <a class="nav-link" href="/about/">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+{% block body %}{% endblock body %}
+
+</body>
+
+</html>

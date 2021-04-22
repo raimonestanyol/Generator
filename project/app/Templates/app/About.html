@@ -1,0 +1,78 @@
+{% extends "app/Base.html" %}
+
+{% block header %}
+    <title>About - Stirling Dish Generator</title>
+{% endblock header %}
+
+{% block body %}
+{% load static %}
+<div class="m-sm-5 px-4 text-justify">
+    <h3 class = "mb-4 ">About the website</h3>
+    <div class = "my-4 ">
+        <div class = "my-2 pb-3">This final degree project by the Polytechnic University of Catalonia had as a primary objective
+            the development of a web application that would allow its users to see in real time the data gathered by the
+            sensors of the Stirling Dish Generator installed at the rooftop of the ETSEIB building, in Barcelona.
+            <a target="_blank" href="https://www.google.es/maps/place/School+of+Industrial+Engineering+of+Barcelona+(ETSEIB)+-+UPC/@41.3843334,2.1142114,324m/data=!3m1!1e3!4m5!3m4!1s0x12a49678ef40aebd:0x898caaf63b47e51b!8m2!3d41.3847923!4d2.115638">
+                See location.</a><br><br>
+        The data is stored permanently and not only can it be searched both in table format and in graph format but it can
+            also be downloaded as a "csv" file from the "Table" page to be used for analysis of the system's performance.<br><br>
+            The site is fully responsive so it can be used from mobile devices as well.
+        </div>
+
+        <h5 class = "my-2 pb-2">How it works</h5>
+        <h6 class = "my-2"> Table </h6>
+        <div class = "my-2 pb-3">
+            The "Table" page loads the table for today by default, changing the date on the date selector
+            will automatically update the table.<br>
+            The data to Download with the "Download CSV" button is synchronized with the table automatically so you can
+            directly download filtered data.<br>
+            The table allows filtering and reordering in each column.<br><br>
+            The lack of a "T_Power" column is explained by the fact
+            that the Thermal Power is a calculated value, in other words, if you were to download and use this data, you can
+            calculate the value of T_Power with this simple product:<br>
+            T_Power = Cool_Flow * ( Cool_T_out - Cool_T_in ) * 4184 / 60<br>
+        </div>
+
+        <h6 class = "my-2"> Graph </h6>
+        <div class = "my-2 pb-3">
+            The "Graph" page loads the graph for today by default, changing the date on the date selector
+            will also automatically update the graph.<br>
+            The graph selector on the left allows multiple variables to be checked at once, and the graph is synchronized
+            with it automatically.<br><br>
+            If more than 90 days are selected, the graph will show data points every two minutes instead of every 1 minute.<br>
+            In particular, if all 13 graphs were selected for a graph of at least 7 days the data would also show only a data
+            point every 2 minutes.<br>
+            It's worth noting that every 90 graphs * day, the number of data points will be progressively reduced to optimize
+            data transfers and computation times.<br>
+            This way if we visualize 21 days and 13 graphs, we will be requesting a total
+            of 273 graphs so since we will be over 90 graphs * day we will get one datapoint every 4 minutes like so:<br>
+            21 days * 13 graphs = 273 days * graphs <br>
+            273 / 90 = 3.033<br>
+            The "divider" is always rounded up so instead of every 3 minutes we get the points every 4 minutes.<br><br>
+            The legend of the graph appears on the bottom, when two or more graphs are selected the arrows allow navigating
+            the legend to see all the variables.
+        </div>
+    </div>
+    <h3 class = "my-2">About the Project</h3>
+    <div class = "my-2 pt-2">Monitoring And Visualization System For A Dish Stirling Generator<br>
+        Originally, in Catalan "Desenvolupament d'un sistema de monitoratge i visualització per un generador Dish Stirling"<br>
+            April 2021
+    </div>
+    <h6 class = "my-2 pt-3 ">Project Author:</h6>
+    <div class = "my-2  ">Raimon Estañol Ruscalleda <br>
+        Student of the Bachelor’s Degree in Industrial Technologies Engineering at ETSEIB
+    </div>
+    <div class = "my-2 ">
+        <a href="https://etseib.upc.edu/en" target="_blank"><img class="img-fluid" height="50" width="50" src="{% static 'app/logoETSEIB.png' %}"></a>
+    </div>
+
+    <h6 class = "my-2 pt-3 ">Project Director:  </h6>
+    <div class = "my-2 ">Daniel Montesinos Miracle <br>
+        Professor at the Department of Electronic Engineering and Director of CITCEA-UPC
+    </div>
+    <div class = "my-2 ">
+        <a href="https://www.citcea.upc.edu/" target="_blank"><img class="img-fluid" height="50" width="150" src="{% static 'app/citcea-logo.svg' %}"></a>
+    </div>
+</div>
+<script type="text/javascript" src="{% static 'app/about.js' %}"></script>
+{% endblock body %}

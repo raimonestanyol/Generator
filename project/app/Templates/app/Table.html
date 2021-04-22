@@ -1,0 +1,25 @@
+{% extends "app/Base.html" %}
+
+{% block header %}
+    {% load static %}
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.1.4/dist/js/tabulator.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <link href="https://unpkg.com/tabulator-tables@4.1.4/dist/css/tabulator.min.css" rel="stylesheet">
+    <title>Table - Stirling Dish Generator</title>
+
+{% endblock header %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-4 mx-3 my-4 d-inline-block"><label class="d-inline-block w-25" for="fromDate">From:</label><input  class="d-inline-block mx-3" type="text" id="fromDate"></div>
+        <div class="col-12 col-sm-4 mx-3 my-4 d-inline-block"><label class="d-inline-block w-25" for="toDate">To:</label><input  class="d-inline-block mx-3" type="text" id="toDate"></div>
+    </div>
+</div>
+<div>
+    <button id="download-csv">Download CSV</button>
+</div>
+<div id="table"></div>
+    {% load static %}
+<script type="text/javascript" src="{% static 'app/table.js' %}"></script>
+{% endblock body %}

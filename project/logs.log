@@ -1,0 +1,4 @@
+ERROR 2021-04-22 03:00:18,075 exception 25592 22564 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2021-04-22 03:00:24,990 exception 25592 25228 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2021-04-22 03:00:41,548 exception 6252 23860 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2021-04-22 03:00:42,550 exception 6252 3372 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.

@@ -1,0 +1,21 @@
+{% extends "app/Base.html" %}
+
+{% block header %}
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Graphics - Stirling Dish Generator</title>
+{% endblock header %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-4 mx-3 my-4 d-inline-block"><label class="d-inline-block w-25" for="fromDate">From:</label><input  class="d-inline-block mx-3" type="text" id="fromDate"></div>
+            <div class="col-12 col-sm-4 mx-3 my-4 d-inline-block"><label class="d-inline-block w-25" for="toDate">To:</label><input  class="d-inline-block mx-3" type="text" id="toDate"></div>
+        </div>
+    </div>
+    <div class="row w-100">
+        <span class="col-12 col-sm-2 pl-5 mr-sm-1 mr-md-0 d-md-inline-block" id="graph-selector"></span>
+        <span class="col-12 col-sm-10 p-0 m-0 d-md-inline-block" id="chart_div"></span>
+    </div>
+{% load static %}
+<script type="text/javascript" src="{% static 'app/graph.js' %}"></script>
+{% endblock body %}
