@@ -9,13 +9,21 @@
 <div class="m-sm-5 px-4 text-justify">
     <h3 class = "mb-4 ">About the website</h3>
     <div class = "my-4 ">
-        <div class = "my-2 pb-3">This final degree project by the Polytechnic University of Catalonia had as a primary objective
-            the development of a web application that would allow its users to see in real time the data gathered by the
+        <div class = "my-2 pb-3">This website, developed as part of a final degree project by the Polytechnic University of Catalonia, allows its users to see in real time the data gathered by the
             sensors of the Stirling Dish Generator installed at the rooftop of the ETSEIB building, in Barcelona.
             <a target="_blank" href="https://www.google.es/maps/place/School+of+Industrial+Engineering+of+Barcelona+(ETSEIB)+-+UPC/@41.3843334,2.1142114,324m/data=!3m1!1e3!4m5!3m4!1s0x12a49678ef40aebd:0x898caaf63b47e51b!8m2!3d41.3847923!4d2.115638">
                 See location.</a><br><br>
-        The data is stored permanently and not only can it be searched both in table format and in graph format but it can
-            also be downloaded as a "csv" file from the "Table" page to be used for analysis of the system's performance.<br><br>
+            The Stirling Dish generates up to 3 KiloWatts of thermal power and up to 1 KiloWatt of electric power.<br>
+            It does so reflecting the sunlight on an aluminium dish which directs it into a
+            collector which raises the temperature of a helium circuit. This circuit then uses the expansion in volume of
+            the helium to power a stirling motor, which turns a dynamo that generates the electric power.
+            <br>For the Helium to move, part of the circuit is dedicated to cooling it off so it decreases in volume again,
+            thus creating the "push" with the heating and the "pull" with the cooling that are necessary for the movement of the helium that in turn has to push the motor.
+            The heat extracted from the helium in order to cool it off is used to warm up water, thus generating the thermal power<br><br>
+            The generator has sensors that measure the temperature at different points of the machine as well as the power generated.
+            This temperatures and powers are then recorded and stored permanently into a database which is used to display them on this website.<br>
+            This data can be searched both in table format and in graph format but it can
+            also be downloaded as a "csv" file from the "Table" page to be used for further analysis of the system's performance.<br><br>
             The site is fully responsive so it can be used from mobile devices as well.
         </div>
 
@@ -27,10 +35,10 @@
             The data to Download with the "Download CSV" button is synchronized with the table automatically so you can
             directly download filtered data.<br>
             The table allows filtering and reordering in each column.<br><br>
-            The lack of a "T_Power" column is explained by the fact
-            that the Thermal Power is a calculated value, in other words, if you were to download and use this data, you can
-            calculate the value of T_Power with this simple product:<br>
-            T_Power = Cool_Flow * ( Cool_T_out - Cool_T_in ) * 4184 / 60<br>
+            The lack of a "T_power" column is explained by the fact
+            that the thermal power is a calculated value, in other words, if you were to download and use this data, you can
+            calculate the value of T_power with this simple product:<br>
+            T_power = Cool_Flow * ( Cool_T_out - Cool_T_in ) * 4184 / 60<br>
         </div>
 
         <h6 class = "my-2"> Graph </h6>
