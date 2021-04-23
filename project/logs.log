@@ -2,3 +2,78 @@ ERROR 2021-04-22 03:00:18,075 exception 25592 22564 Invalid HTTP_HOST header: '1
 ERROR 2021-04-22 03:00:24,990 exception 25592 25228 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
 ERROR 2021-04-22 03:00:41,548 exception 6252 23860 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
 ERROR 2021-04-22 03:00:42,550 exception 6252 3372 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+INFO 2021-04-22 07:29:39,961 autoreload 22296 25312 Watching for file changes with StatReloader
+INFO 2021-04-22 07:29:42,572 basehttp 22296 6728 "GET /home/ HTTP/1.1" 200 3120
+WARNING 2021-04-22 07:29:42,813 log 22296 6728 Not Found: /static/app/home.js
+WARNING 2021-04-22 07:29:42,814 log 22296 26548 Not Found: /static/app/Stirling-logo.jpg
+WARNING 2021-04-22 07:29:42,815 basehttp 22296 6728 "GET /static/app/home.js HTTP/1.1" 404 179
+WARNING 2021-04-22 07:29:42,815 log 22296 17708 Not Found: /static/app/Stirling_Generator.JPG
+WARNING 2021-04-22 07:29:42,816 basehttp 22296 26548 "GET /static/app/Stirling-logo.jpg HTTP/1.1" 404 179
+WARNING 2021-04-22 07:29:42,817 basehttp 22296 17708 "GET /static/app/Stirling_Generator.JPG HTTP/1.1" 404 179
+INFO 2021-04-22 07:34:46,254 autoreload 21292 7984 Watching for file changes with StatReloader
+INFO 2021-04-22 07:34:52,921 basehttp 21292 24264 "GET /home/ HTTP/1.1" 200 3120
+WARNING 2021-04-22 07:34:52,966 log 21292 24264 Not Found: /static/app/Stirling-logo.jpg
+WARNING 2021-04-22 07:34:52,967 basehttp 21292 24264 "GET /static/app/Stirling-logo.jpg HTTP/1.1" 404 179
+WARNING 2021-04-22 07:34:53,083 log 21292 24264 Not Found: /static/app/home.js
+WARNING 2021-04-22 07:34:53,084 basehttp 21292 24264 "GET /static/app/home.js HTTP/1.1" 404 179
+WARNING 2021-04-22 07:34:53,150 log 21292 24264 Not Found: /static/app/Stirling_Generator.JPG
+WARNING 2021-04-22 07:34:53,151 basehttp 21292 24264 "GET /static/app/Stirling_Generator.JPG HTTP/1.1" 404 179
+INFO 2021-04-22 07:38:23,273 autoreload 21292 7984 C:\Users\raimoner\Documents\GitHub\Generator\project\project\settings.py changed, reloading.
+INFO 2021-04-22 07:38:23,803 autoreload 26540 8484 Watching for file changes with StatReloader
+ERROR 2021-04-22 07:38:38,319 log 26540 11812 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\raimoner\Documents\GitHub\Generator\project\app\views.py", line 20, in home
+    return render(request, 'app/Home.html')
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\template\base.py", line 168, in render
+    with context.bind_template(self):
+  File "C:\Users\raimoner\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\template\context.py", line 244, in bind_template
+    updates.update(processor(self.request))
+TypeError: 'module' object is not callable
+ERROR 2021-04-22 07:38:38,323 basehttp 26540 11812 "GET /home/ HTTP/1.1" 500 145
+WARNING 2021-04-22 07:38:38,565 log 26540 11812 Not Found: /favicon.ico
+WARNING 2021-04-22 07:38:38,565 basehttp 26540 11812 "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2021-04-22 07:40:20,359 autoreload 17288 16340 Watching for file changes with StatReloader
+ERROR 2021-04-22 07:40:23,251 log 17288 21948 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\raimoner\Documents\GitHub\Generator\project\app\views.py", line 20, in home
+    return render(request, 'app/Home.html')
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\template\base.py", line 168, in render
+    with context.bind_template(self):
+  File "C:\Users\raimoner\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "C:\Users\raimoner\Documents\GitHub\Generator\venv\lib\site-packages\django\template\context.py", line 244, in bind_template
+    updates.update(processor(self.request))
+TypeError: 'module' object is not callable
+ERROR 2021-04-22 07:40:23,255 basehttp 17288 21948 "GET /home/ HTTP/1.1" 500 145
+INFO 2021-04-22 07:40:52,475 autoreload 17288 16340 C:\Users\raimoner\Documents\GitHub\Generator\project\project\settings.py changed, reloading.
+INFO 2021-04-23 02:28:42,231 autoreload 15476 11372 Watching for file changes with StatReloader
+INFO 2021-04-23 02:28:45,910 basehttp 15476 6216 "GET /home/ HTTP/1.1" 200 3120
+WARNING 2021-04-23 02:28:45,951 log 15476 6216 Not Found: /static/app/Stirling-logo.jpg
+WARNING 2021-04-23 02:28:45,952 basehttp 15476 6216 "GET /static/app/Stirling-logo.jpg HTTP/1.1" 404 179
+WARNING 2021-04-23 02:28:46,044 log 15476 6216 Not Found: /static/app/home.js
+WARNING 2021-04-23 02:28:46,045 basehttp 15476 6216 "GET /static/app/home.js HTTP/1.1" 404 179
+WARNING 2021-04-23 02:28:46,096 log 15476 6216 Not Found: /static/app/Stirling_Generator.JPG
+WARNING 2021-04-23 02:28:46,096 basehttp 15476 6216 "GET /static/app/Stirling_Generator.JPG HTTP/1.1" 404 179
+INFO 2021-04-23 02:40:11,861 autoreload 15476 11372 C:\Users\raimoner\Documents\GitHub\Generator\project\project\settings.py changed, reloading.
