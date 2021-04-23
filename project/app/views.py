@@ -82,10 +82,6 @@ def registry_graph(request, graphs, date_from, date_to):
             DATETIME__gte=dt(year=date_from.year, month=date_from.month, day=date_from.day)).filter(
             DATETIME__lte=dt(year=date_to.year, month=date_to.month, day=date_to.day)).values(*activated_graphs, )[
                    :: divider]
-        print("days " + str(days_difference.days))
-        print(graphs_num, *activated_graphs)
-        print(divider)
-        print(ceil(len(registry) * graphs_num / divider))
 
     except DataRegistry.DoesNotExist:
         return HttpResponse(status=404)
