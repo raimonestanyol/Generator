@@ -82,9 +82,10 @@ def registry_graph(request, graphs, date_from, date_to):
             DATETIME__gte=dt(year=date_from.year, month=date_from.month, day=date_from.day)).filter(
             DATETIME__lte=dt(year=date_to.year, month=date_to.month, day=date_to.day)).values(*activated_graphs, )[
                    :: divider]
+        serializer = TableSerializer(registry, many=True)
 
     except DataRegistry.DoesNotExist:
         return HttpResponse(status=404)
     return Response(registry)
     if request.method == 'GET':
-        return Response(registry)
+        return Response(serializer.data)
